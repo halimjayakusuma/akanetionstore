@@ -1,0 +1,45 @@
+
+.home {
+    background-color: #B76160;
+}
+.home .logo{
+    margin-top: 50px;
+}
+.home .row .kiri {
+    background-color: #fff;
+    padding: 94px;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    margin-left: 70px;
+}
+.home .row .kiri img{
+    width: 322px;
+    height: 150;
+}
+.home .row  .text{
+    font-size: 38px;
+    text-align: center;
+}
+.home .row .kanan {
+    background-color: #fff;
+    padding: 94px;
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    
+}
+.home .row .kanan img{
+    width: 322px;
+    height: 150;
+}
+
+.home  .btn {
+    background-color: #10FF06;
+    font-weight: 500;
+}
+.home .tombol {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}

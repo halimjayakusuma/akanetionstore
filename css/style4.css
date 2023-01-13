@@ -1,0 +1,392 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #e2fdff;
+}
+
+/* NavBar */
+.akanetionjpg {
+    position: absolute;
+    z-index: 3;
+}
+
+header {
+    position: absolute;
+    background-color: #e2fdff;
+    top: 0;
+    left: 0;
+    padding: 0 100px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+header .logo {
+    color: rgb(0, 255, 0);
+    height: 60px;
+    line-height: 60px;
+    font-size: 24px;
+    float: left;
+    font-weight: bold;
+}
+
+header nav {
+    float: right;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    color: rgb(0, 0, 0);
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul li a:hover {
+    color: rgb(0, 0, 0);
+    background-color: aqua;
+}
+
+.menu-toggle {
+    color: rgb(69, 71, 69);
+    float: right;
+    line-height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+/* responsive */
+
+@media (max-width: 650px) {
+    header {
+        padding: 0 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #333;
+        top: 50px;
+        left: -100%;
+        transition: 0.5s all;
+    }
+
+    header nav.active {
+        left: 0;
+    }
+
+    header nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    header nav ul li a {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* end navbar */
+
+.datainput {
+    position: relative;
+    margin: 5px 0 20px;
+}
+
+.datainput p {
+    font-size: 12px;
+    background: #eee;
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: .5rem;
+}
+
+.whatsapp-form textarea {
+    min-height: 120px
+}
+
+.datainput select {
+    padding: 12px 0;
+    color: #555;
+    font-size: 14px;
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    background: #fff
+}
+
+.datainput input,
+.datainput textarea {
+    font-size: 15px;
+    padding: 15px 0;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ddd
+}
+
+.datainput input:focus,
+.datainput textarea:focus {
+    outline: none
+}
+
+.datainput label {
+    color: #999;
+    font-size: 14px;
+    font-weight: 400;
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    top: 18px;
+    transition: .2s ease all
+}
+
+.datainput input:focus~label,
+.datainput input:valid~label,
+.datainput textarea:focus~label,
+.datainput textarea:valid~label {
+    top: -10px;
+    font-size: 14px;
+    color: #21a51f
+}
+
+#notif-license span {
+    font-size: 40px
+}
+
+#notif-license {
+    display: none;
+    position: fixed
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%
+}
+
+.bar:before,
+.bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #21a51f;
+    transition: .2s ease all
+}
+
+.bar:before {
+    left: 50%
+}
+
+.bar:after {
+    right: 50%
+}
+
+.datainput input:focus~.bar:before,
+.datainput input:focus~.bar:after,
+.datainput textarea:focus~.bar:before,
+.datainput textarea:focus~.bar:after {
+    width: 50%
+}
+
+.indigox {
+    background: #3f51b5
+}
+
+.orangex {
+    background: #ff9800
+}
+
+.pinkx {
+    background: #e91e63
+}
+
+.bluex {
+    background: #2196F3
+}
+
+.purplex {
+    background: #9c27b0
+}
+
+.redx {
+    background: #F44336
+}
+
+.greenx {
+    background: #4CAF50
+}
+
+.highlight {
+    position: absolute;
+    height: 50%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: .5
+}
+
+.datainput input:focus~.highlight,
+.datainput textarea:focus~.highlight {
+    animation: inputHighlighter .3s ease
+}
+
+.datainput input:focus~label,
+.datainput input:valid~label,
+.datainput textarea:focus~label,
+.datainput textarea:valid~label {
+    top: -10px;
+    font-size: 13px;
+    color: #21a51f
+}
+
+/* Default Whatsapp Form CSS by www.idblanter.com */
+form.whatsapp-form {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+    border-radius: .5rem;
+    padding: 20px;
+    box-sizing: border-box;
+    color: rgb(123, 198, 112);
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+    justify-content: center;
+}
+
+.whatsapp-form a.send_form {
+    color: #fff;
+    background: #21a51f;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: .3rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 15px;
+}
+
+#text-info span {
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    font-weight: 700;
+    margin: 15px 0;
+    border-radius: .5rem;
+}
+
+#text-info span.yes {
+    background: #c6ffc5;
+    color: #0ea904;
+}
+
+#text-info span.no {
+    background: #ffc5c5;
+    color: #ce0404;
+}
+
+/* footer */
+footer {
+    bottom: 0%;
+}
+
+/* AkaneTion */
+.akanetion-logo {
+    position: absolute;
+    left: 10px;
+    display: grid;
+}
+
+/* AkaneTion Watches */
+.akanetion-watches {
+    position: absolute;
+    width: 132px;
+    height: 80px;
+    left: 130px;
+    top: auto;
+    font-size: 26px;
+    line-height: 40px;
+}
+
+/* AkaneTion Watches About Us */
+
+.about-us {
+    position: absolute;
+    left: 360px;
+    top: auto;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-size: 25px;
+    line-height: 33px;
+}
+
+/* Policy Privacy Policy Terms and Conditions */
+.policy {
+    position: absolute;
+    left: 800px;
+    top: auto;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-size: 25px;
+    line-height: 33px;
+}
+
+/* Contact Us */
+.contact-us {
+    position: absolute;
+    left: 1300px;
+    top: auto;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-size: 25px;
+    line-height: 33px;
+}
+
+/* WhatsApp */
+
+.whatsapp {
+    top: auto;
+    position: absolute;
+    left: 1290px;
+    object-fit: cover;
+}
+
+/* Tokopedia */
+
+.tokped {
+    top: auto;
+    position: absolute;
+    left: 1330px;
+    object-fit: cover;
+}
+
+/* Instagram */
+
+.instagram {
+    top: auto;
+    position: absolute;
+    left: 1355px;
+    object-fit: cover;
+}

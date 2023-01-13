@@ -1,0 +1,227 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e2fdff;
+}
+
+/* NavBar */
+.akanetionjpg {
+  position: absolute;
+  z-index: 3;
+}
+
+header {
+  position: absolute;
+  background: #e2fdff;
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+header .logo {
+  color: rgb(0, 255, 0);
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  float: left;
+  font-weight: bold;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  color: rgb(0, 0, 0);
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  text-decoration: none;
+  display: block;
+}
+
+header nav ul li a:hover {
+  color: rgb(0, 0, 0);
+  background-color: aqua;
+}
+
+.menu-toggle {
+  color: rgb(69, 71, 69);
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* responsive */
+
+@media (max-width: 650px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: #333;
+    top: 50px;
+    left: -100%;
+    transition: 0.5s all;
+  }
+
+  header nav.active {
+    left: 0;
+  }
+
+  header nav ul {
+    display: block;
+    text-align: center;
+  }
+
+  header nav ul li a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
+  }
+}
+/* end navbar */
+
+.card-container {
+  width: auto;
+  align-items: start;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, 20rem);
+  justify-content: center;
+}
+
+.card {
+  /* background-color: orangered; */
+  width: 80%;
+  border-radius: 5px;
+  color: white;
+  padding: 24px 0 16px;
+  text-align: center;
+}
+
+
+div.card img {
+  width: 90%;
+  height: auto;
+}
+
+.rectangle {
+  height: 125px;
+  width: 250px;
+  background: #02BC5F;
+  color: black;
+  text-align: center;
+  opacity: 0.6;
+  transition: 0.4s;
+}
+
+.rectangle:hover {opacity: 1;}
+
+/* footer */
+footer {
+  bottom: 0%;
+}
+
+/* AkaneTion */
+.akanetion-logo {
+  position: absolute;
+  left: 10px;
+  display: grid;
+}
+
+/* AkaneTion Watches */
+.akanetion-watches {
+  position: absolute;
+  width: 132px;
+  height: 80px;
+  left: 130px;
+  top: auto;
+  font-size: 26px;
+  line-height: 40px;
+}
+
+/* AkaneTion Watches About Us */
+
+.about-us {
+  position: absolute;
+  left: 360px;
+  top: auto;
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-size: 25px;
+  line-height: 33px;
+}
+
+/* Policy Privacy Policy Terms and Conditions */
+.policy {
+  position: absolute;
+  left: 800px;
+  top: auto;
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-size: 25px;
+  line-height: 33px;
+}
+
+/* Contact Us */
+.contact-us {
+  position: absolute;
+  left: 1300px;
+  top: auto;
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-size: 25px;
+  line-height: 33px;
+}
+
+/* WhatsApp */
+
+.whatsapp {
+  top: auto;
+  position: absolute;
+  left: 1290px;
+  object-fit: cover;
+}
+
+/* Tokopedia */
+
+.tokped {
+  top: auto;
+  position: absolute;
+  left: 1330px;
+  object-fit: cover;
+}
+
+/* Instagram */
+
+.instagram {
+  top: auto;
+  position: absolute;
+  left: 1355px;
+  object-fit: cover;
+}
